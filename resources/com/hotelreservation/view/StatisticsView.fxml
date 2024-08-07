@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hotelreservation.view.StatisticsViewController"
+            stylesheets="styles.css">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <Label text="Booking Statistics" styleClass="title"/>
+
+        <!-- 表格：按城市、区域、酒店和价格统计 -->
+        <TableView fx:id="bookingStatisticsTable" VBox.vgrow="ALWAYS" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="cityColumn" text="City" prefWidth="150"/>
+                <TableColumn fx:id="districtColumn" text="District" prefWidth="150"/>
+                <TableColumn fx:id="hotelColumn" text="Hotel" prefWidth="200"/>
+                <TableColumn fx:id="priceRangeColumn" text="Price Range" prefWidth="150"/>
+                <TableColumn fx:id="bookingsColumn" text="Bookings" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+        <!-- 柱状图：按城市统计预订数量 -->
+        <BarChart fx:id="barChart" prefWidth="400" prefHeight="300">
+            <xAxis>
+                <CategoryAxis fx:id="barChartCategoryAxis" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="barChartNumberAxis" side="LEFT"/>
+            </yAxis>
+        </BarChart>
+
+        <!-- 饼图：按照入住人信息统计客房预定情况 -->
+        <PieChart fx:id="pieChart" prefWidth="300" prefHeight="300"/>
+    </VBox>
+</AnchorPane>

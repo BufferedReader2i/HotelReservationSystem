@@ -1,0 +1,181 @@
+/* styles.css 文件，位于相同目录下的 resources 文件夹中 */
+.date-picker {
+    -fx-background-color: #f0f0f0; /* 背景颜色 */
+    -fx-text-fill: #333; /* 文字颜色 */
+    -fx-border-color: #dcdcdc; /* 边框颜色 */
+    -fx-border-width: 2px; /* 边框宽度 */
+    -fx-border-radius: 5px; /* 边框圆角 */
+}
+
+.date-picker:hover {
+    -fx-background-color: #e0e0e0; /* 鼠标悬浮时的背景颜色 */
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent; /* 箭头按钮背景色 */
+    -fx-mark-color: #333; /* 箭头颜色 */
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #dcdcdc; /* 鼠标悬浮在箭头按钮上的背景色 */
+}
+.anchor-pane {
+    -fx-background-color: #f5f5f5;
+}
+
+.vbox {
+    -fx-alignment: center;
+}
+
+.hbox {
+    -fx-alignment: baseline;
+    -fx-spacing: 5;
+}
+
+.label {
+    -fx-text-fill: #333;
+}
+
+.text-field {
+    -fx-prompt-text-fill: #ccc;
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4;
+    -fx-min-width: 150px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4caf50;
+}
+
+.button {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: #fff;
+    -fx-border-color: #4caf50;
+    -fx-border-radius: 4;
+    -fx-padding: 8 15 8 15;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+.cancel-button {
+    -fx-background-color: rgba(243, 13, 13, 0.45); /* 按钮背景颜色 */
+    -fx-text-fill: white;           /* 按钮文本颜色 */
+    -fx-border-color: rgba(243, 13, 13, 0.45);        /* 按钮边框颜色 */
+    -fx-border-radius: 5;            /* 按钮边框圆角 */
+    -fx-background-radius: 5;        /* 背景圆角 */
+    -fx-padding: 5 10 5 10;          /* 内边距 */
+}
+
+/* 鼠标悬停时的样式 */
+.cancel-button:hover {
+    -fx-background-color: #ff3333;
+}
+.checkIn-button {
+    -fx-background-color: rgba(13, 155, 243, 0.65); /* 按钮背景颜色 */
+    -fx-text-fill: white;           /* 按钮文本颜色 */
+    -fx-border-color: rgba(13, 155, 243, 0.65);        /* 按钮边框颜色 */
+    -fx-border-radius: 5;            /* 按钮边框圆角 */
+    -fx-background-radius: 5;        /* 背景圆角 */
+    -fx-padding: 5 10 5 10;          /* 内边距 */
+}
+
+/* 鼠标悬停时的样式 */
+.refresh-button:hover {
+    -fx-background-color: rgba(63, 68, 25, 0.65);
+}
+.refresh-button {
+    -fx-background-color: rgba(173, 182, 107, 0.65); /* 按钮背景颜色 */
+    -fx-text-fill: white;           /* 按钮文本颜色 */
+    -fx-border-color: rgba(173, 182, 107, 0.65);        /* 按钮边框颜色 */
+    -fx-border-radius: 5;            /* 按钮边框圆角 */
+    -fx-background-radius: 5;        /* 背景圆角 */
+    -fx-padding: 5 10 5 10;          /* 内边距 */
+}
+
+/* 鼠标悬停时的样式 */
+.checkIn-button:hover {
+    -fx-background-color: #2977bd;
+}
+.table-view {
+    -fx-base: #fff;
+    -fx-control-inner-background: #fff;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333;
+    -fx-padding: 8 15 8 15;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e1bee7;
+}
+.table-view .table-cell {
+    -fx-text-fill: black;
+}
+/* 灰色按钮的通用样式 */
+.gray-button {
+    -fx-background-color: #cccccc; /* 灰色背景 */
+    -fx-text-fill: #333333; /* 文本颜色 */
+    -fx-border-color: #aaaaaa; /* 边框颜色 */
+
+    -fx-border-radius: 4;
+    -fx-padding: 8 15 8 15;
+}
+
+/* 灰色按钮悬停效果 */
+.gray-button:hover {
+    -fx-background-color: #bfbfbf; /* 鼠标悬停时更深的灰色 */
+}
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.table-view {
+    -fx-base: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333;
+    -fx-padding: 8 15 8 15;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e1bee7;
+}
+
+.bar-chart {
+    -fx-legend-visible: false;
+    -fx-padding: 10;
+}
+
+.bar-chart-bar {
+    -fx-bar-fill: #4caf50;
+}
+
+/* styles.css */

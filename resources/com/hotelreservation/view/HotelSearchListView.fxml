@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hotelreservation.view.HotelSearchListViewController"
+            stylesheets="styles.css">
+    <VBox spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <!-- Search Criteria -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="城市:" />
+            <TextField fx:id="cityField" promptText="城市" />
+            <Label text="区域:" />
+            <TextField fx:id="areaField" promptText="区域" />
+            <Label text="酒店:" />
+            <TextField fx:id="hotelNameField" promptText="酒店名" />
+        </HBox>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="日期" />
+            <DatePicker fx:id="checkInDate" promptText="入住日期" />
+            <Label text="-" />
+            <DatePicker fx:id="checkOutDate" promptText="离开日期" />
+
+
+
+        </HBox>
+        <HBox spacing="5">
+            <Label text="价格范围:" />
+            <TextField fx:id="minPriceField" promptText="最小价格" />
+            <Label text="-" />
+            <TextField fx:id="maxPriceField" promptText="最大价格" />
+        </HBox>
+        <HBox spacing="20">
+            <Button fx:id="searchButton" text="搜索" onAction="#handleSearch" />
+            <Button fx:id="clearButton" text="清除" onAction="#clear" style="-fx-background-color: rgba(126,124,124,0.64); -fx-border-color: rgba(126,124,124,0.64);-fx-text-fill: white;"/>
+            <Hyperlink fx:id="myOrdersLink" text="我的订单" onAction="#goToMyOrders" />
+            <Hyperlink fx:id="LoginLink" text="退出" onAction="#goToLoginView" />
+
+
+        </HBox>
+
+        <!-- Hotel List -->
+        <TableView fx:id="hotelTable" VBox.vgrow="ALWAYS" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="hotelNameColumn" text="酒店" prefWidth="200" />
+                <TableColumn fx:id="cityColumn" text="城市" prefWidth="100" />
+                <TableColumn fx:id="districtColumn" text="区域" prefWidth="100" />
+                <TableColumn fx:id="addressColumn" text="地址" prefWidth="200" />
+
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="com.hotelreservation.view.LoginViewController" styleClass="login-box">
+    <Label text="酒店预订管理系统" styleClass="title" />
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="用户" styleClass="input-label" />
+        <TextField fx:id="usernameField" styleClass="text-input" />
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="密码" styleClass="input-label" />
+        <PasswordField fx:id="passwordField" styleClass="text-input" />
+    </HBox>
+
+
+    <Button fx:id="loginButton" text="登录" styleClass="btn-primary" onAction="#handleLogin" />
+
+
+    <HBox spacing="10" alignment="BOTTOM_RIGHT">
+        <Hyperlink fx:id="createAccountLink" text="创建账号" onAction="#goToRegister" />
+        <Label fx:id="userTypeLabel" text="" styleClass="label" />
+        <Button fx:id="changeButton" text="切换至管理员"   />
+
+
+    </HBox>
+    <Label fx:id="messageLabel" text="          " styleClass="label" />
+
+</VBox>

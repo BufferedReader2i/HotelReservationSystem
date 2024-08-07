@@ -1,0 +1,50 @@
+.login-box {
+    -fx-padding: 40px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0, 0, 0);
+    -fx-alignment: center;
+}
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weiwght: bold;
+}
+
+.input-label {
+    -fx-text-fill: #666;
+}
+
+.text-input {
+    -fx-prompt-text-fill: #999;
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-min-width: 200px;
+}
+
+.text-input:focused {
+    -fx-border-color: #4caf50;
+}
+
+.btn-primary {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-border-color: #4caf50;
+    -fx-border-radius: 5;
+    -fx-padding: 10 20 10 20;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #45a049;
+}
+
+.Hyperlink {
+    -fx-text-fill: #4caf50;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-underline: true;
+}
+
+.Hyperlink:hover {
+    -fx-underline: true;
+}

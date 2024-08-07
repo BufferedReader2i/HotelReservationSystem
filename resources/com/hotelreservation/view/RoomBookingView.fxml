@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hotelreservation.view.RoomBookingViewController"
+            stylesheets="styles.css">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="预定房间数:"/>
+            <TextField fx:id="roomQuantityField" prefWidth="50" text="1" />
+            <Button fx:id="decreaseRoomButton" text="-" />
+            <Button fx:id="increaseRoomButton" text="+" />
+            <Label fx:id="priceLabel" text=""/>
+            <Label fx:id="roomCountLabel" text=""/>
+
+
+        </HBox>
+
+        <HBox spacing="10" layoutY="100" layoutX="20" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <Label text="入住人信息" styleClass="sub-title"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="姓名:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="guestNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="年龄:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="guestAgeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="身份证号:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="guestIdNumberField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Label text="性别:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <HBox GridPane.rowIndex="3" GridPane.columnIndex="1">
+                    <RadioButton fx:id="maleRadioButton" text="男" />
+                    <RadioButton fx:id="femaleRadioButton" text="女" />
+
+                </HBox>
+
+                <Label text="职业:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="guestOccupationField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="受教育程度:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="educationLevelChoiceBox" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="收入状况:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <ChoiceBox fx:id="incomeStatusChoiceBox" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="日期" styleClass="sub-title" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <DatePicker fx:id="checkInDatePicker" promptText="入住日期" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+                <DatePicker fx:id="checkOutDatePicker" promptText="离开日期" GridPane.rowIndex="7" GridPane.columnIndex="2"/>
+
+            </GridPane>
+            <HBox spacing="10" alignment="BOTTOM_RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <Button fx:id="addGuestButton" text="添加入住人" onAction="#handleAddGuest" />
+                    <Button fx:id="clearButton" text="清除入住人" onAction="#clearGuest" styleClass="gray-button" />
+
+            </HBox>
+        </HBox>
+
+        <!-- 用于展示额外客人信息的表格 -->
+        <TableView fx:id="guestsTable" prefHeight="200" prefWidth="300">
+            <columns>
+                <TableColumn fx:id="guestNameColumn" text="姓名" prefWidth="110"/>
+                <TableColumn fx:id="guestIDNumberColumn" text="身份证号" prefWidth="100"/>
+                <TableColumn fx:id="guestAgeColumn" text="年龄" prefWidth="80"/>
+                <TableColumn fx:id="guestGenderColumn" text="性别" prefWidth="100"/>
+                <TableColumn fx:id="guestOccupationColumn" text="职业" prefWidth="120"/>
+                <TableColumn fx:id="guestEducationLevelColumn" text="受教育程度" prefWidth="130"/>
+                <TableColumn fx:id="guestIncomeStatusColumn" text="收入状况" prefWidth="120"/>
+
+            </columns>
+        </TableView>
+        <HBox spacing="10" alignment="CENTER">
+
+            <Button fx:id="reserveButton" text="预定房间" onAction="#handleReserveRoom"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>
